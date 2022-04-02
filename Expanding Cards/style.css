@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Josefin Sans', sans-serif;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    height: 100vh;
+
+    margin: auto;
+    
+    gap: 15px;
+}
+
+.panel{
+    transition: all 700ms ease;
+
+    position: relative;
+
+    width: 5%;
+    height: 80vh;
+}
+.panel h4{
+    display: none;
+}
+.panel img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Active State */
+.active{
+    position: relative;
+
+    width: 80%;
+    height: 80vh;
+}
+
+.active img{
+    width: 100%;
+}
+.active h4{
+    display: flex;
+    align-items: center;
+    
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    padding: 10px 10px;
+    border-radius: 10px;
+
+    background-color: #40404052;
+    color: #fff;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.active h4 img{width: 20px; border-radius: 0; margin-right: 10px;}
+.active h4:hover{transform: scale(1.04);}
